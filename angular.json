@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "ngMessenger"
+    }
+  },
+  "defaultProject": "ngMessenger",
+  "cli": {
+    "analytics": false
+  }
 }

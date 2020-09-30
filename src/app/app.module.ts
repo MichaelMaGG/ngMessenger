@@ -4,21 +4,27 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { CrisisListComponent } from './crisis-list/crisis-list.component';
-import { HeroListComponent } from './hero-list/hero-list.component';
 import { AppRoutingModule } from './app-routing.module';
+import { EQualMonitorComponent } from './e-qual-monitor/e-qual-monitor.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { HeroesModule } from './heroes/heroes.module';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     CrisisListComponent,
-    HeroListComponent
+
+    EQualMonitorComponent,
+
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     AppRoutingModule,
+    HeroesModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -9,5 +9,4 @@ export interface Result {
     raw_dresult: number;
     dresult:     number;
     posted_ind:  string;
-    REGX:        number;
 }

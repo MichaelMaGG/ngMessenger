@@ -1,0 +1,28 @@
+.HolyGrail {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+  
+  header,
+  footer {
+    flex: 1;
+  }
+  
+  .HolyGrail-body {
+    display: flex;
+    flex: 1;
+  }
+  
+  .HolyGrail-content {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .HolyGrail-nav, .HolyGrail-ads {
+    flex: 0 0 12em;
+  }
+  
+  .HolyGrail-nav {
+    order: -1;
+  }

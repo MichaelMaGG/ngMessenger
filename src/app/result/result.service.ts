@@ -13,17 +13,27 @@ export class ResultService {
 
   private resultsUrl = 'http://localhost:8090/result';  // URL to web api
 
-  constructor(
-    private http: HttpClient,
-    ) { }
+  httpOptions = {
+    headers: new HttpHeaders({ 'Content-Type': 'application/json'})
+  };
+
+  // httpString  = {
+  //   headers: new HttpHeaders({ 'Content-Type': 'application/json'})
+  // };
+
+  constructor(private http: HttpClient) { }
 
   /** GET heroes from the server */
   getResults(): Observable<Result[]> {
-    return this.http.get<Result[]>(this.resultsUrl)
+    return this.http.get<Result[]>(this.resultsUrl, this.httpOptions)
       .pipe(
-        catchError(this.handleError<Result[]>('getResponse'))
+        catchError(this.handleError<Result[]>('getHeroes', []))
       );
   }
+
+  // getHello(): void {
+  //   console.log(this.http.get<String>('http://localhost:8090/hello'));
+  // }
 
   getMockResults(): Observable<Result[]> {
     return of(RESULTS);

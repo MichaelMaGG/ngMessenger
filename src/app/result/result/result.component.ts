@@ -20,15 +20,20 @@ export class ResultComponent implements OnInit {
 
   results: Result[];
 
+  hello: String;
+
   constructor(
     private resultService: ResultService,
     private http: HttpClient,
   ) {}
 
   ngOnInit(): void {
-    this.resultService.getMockResults()
+    this.resultService.getResults()
       .subscribe(results => this.results = results);
       console.log(this.results);
+
+    // this.resultService.getHello();
+    // console.log("hello:" + this.hello);
   }
 
   getResults(): void {
